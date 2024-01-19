@@ -1,0 +1,24 @@
+ .editBtn{
+    background: green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    
+ }
+ form{
+    display: flex;
+    gap: 10px;
+ }
+ .closeBtn{
+    margin-bottom: 15px;
+    background: red;
+    color: white;
+    text-align: center;
+    width: 50px;
+    border: none;
+    border-radius: 5px
+    ;
+ }

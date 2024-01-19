@@ -40,7 +40,19 @@ app.delete("/delete/:id", (req, res) => {
         .then(result => res.json(result))
         .catch(err => res.json(err))
 })
+app.put("/edit/", (req, res) => {
+    const body = req.body
+    const id = body.task._id
+    const editTodo = body.editTodo
+    
+
+    TodoModel.findByIdAndUpdate({ _id: id }, { task: editTodo })
+        .then(result => console.log(res.json(result)))
+        .catch(error => res.json(error))
+
+
+})
 
 app.listen(3001, () => {
     console.log("Server is Running")
-})
+}) 

@@ -9,9 +9,11 @@ function App() {
       <div className="container-fluid">
         <div className="row">
           <div className='col-md-12 px-0'>
-            <Home/>
-           
-           
+            <Home />
+
+
+
+
           </div>
         </div>
       </div>

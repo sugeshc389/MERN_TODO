@@ -1,16 +1,18 @@
-import { useState } from "react";
+import {  useState } from "react";
 import axios from "axios";
 
 
-const AddTodo = () => {
-  const [task, setTask] = useState()
+const AddTodo = ({ props }) => {
+  const [task, setTask] = useState();
   const handleAdd = () => {
 
     axios.post('http://localhost:3001/add', { task: task })
       .then(result => console.log(result))
       .catch(err => console.log(err))
-      setTask("");
+    setTask("");
+    props.getTodo();
   }
+
 
   return (
     <div>
